@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment box</title>
+</head>
+<body>
+    <h1>comment below</h1>
+    <div id="comment-section">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias porro facere obcaecati voluptas quia sed quo magnam vero, voluptates deserunt?</p>
+        <br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias porro facere obcaecati voluptas quia sed quo magnam vero, voluptates deserunt?</p>
+        <br>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias porro facere obcaecati voluptas quia sed quo magnam vero, voluptates deserunt?</p>
+        <br>
+    </div>
+    <div>
+        <textarea name="" id="text-area" cols="60" rows="5"></textarea>
+        <button id="post-btn">post</button>
+    </div>
+
+
+    <script>
+        document.getElementById('post-btn').addEventListener('click', function(){
+            const textArea = document.getElementById('text-area');
+            const textAreaValue = textArea.value;
+
+            const commentSection = document.getElementById('comment-section');
+
+            const newComment = document.createElement('p');
+            newComment.innerText = textAreaValue;
+            commentSection.appendChild(newComment);
+
+            textArea.value = '';
+        });
+    </script>
+</body>
+</html>

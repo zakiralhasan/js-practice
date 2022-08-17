@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text update in DOM</title>
+</head>
+<body>
+    <h1>Text update</h1>
+    <br><br>
+    <p id="paragraph">I love javascript</p>
+    <br>
+    <input id="input-field" type="text">
+    <button id="update-btn">update</button>
+
+
+
+    <script>
+        document.getElementById('update-btn').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field');
+           const inputFieldValue = inputField.value;
+           
+           const paragraph = document.getElementById('paragraph');
+           paragraph.innerText = inputFieldValue;
+
+           inputField.value = '';
+        });
+    </script>
+</body>
+</html>

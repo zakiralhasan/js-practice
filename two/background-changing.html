@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom practice</title>
+</head>
+<body>
+    <main id="main-container">
+        <section id="bg-section">
+            <h1>Background changing button.</h1>
+            <br>
+            <br>
+            <!-- aplly event on html tag directly -->
+            <button id="green-btn" class="btn green-btn" onclick="document.body.style.backgroundColor = 'green'">make Background green</button>
+
+            <!-- apply event on html by calling function   (very important method) -->
+            <button id="blue-btn" class="btn blue-btn" onclick="blueBackground()">make Background blue</button>
+
+            <!-- apply event using evnt handler -->
+            <button id="yellow-btn" class="btn yellow-btn">make Background yellow</button>
+
+            <!-- apply event using evnt handler by other type-->
+            <button id="red-btn" class="btn red-btn">make Background red</button>
+
+            <button id="pink-btn" class="btn pink-btn">make Background pink</button>
+
+            <button id="white-btn" class="btn white-btn">make Background white</button>
+        </section>
+    </main>
+    <script>
+        // method tow ******************(very important methode)****************
+        function blueBackground(){
+            document.body.style.backgroundColor = 'blue';
+        };
+
+        // method three 
+        document.getElementById('yellow-btn').addEventListener('click', yellowBackground);
+
+        function yellowBackground(){
+            document.body.style.backgroundColor = 'yellow';
+        };
+
+        // method four ******************(very important methode)****************
+        document.getElementById('red-btn').addEventListener('click', function(){
+            document.body.style.backgroundColor = 'red';
+        });
+
+        // method five one system
+        document.getElementById('pink-btn').onclick = pinkBackgroundColor;
+
+        function pinkBackgroundColor(){
+            document.body.style.backgroundColor = 'pink';
+        };
+        // method five other system
+        document.getElementById('pink-btn').onclick = function pinkBackgroundColor(){
+            document.body.style.backgroundColor = 'pink';
+        };
+
+
+    </script>
+</body>
+</html>

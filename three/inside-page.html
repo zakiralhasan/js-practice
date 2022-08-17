@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inside page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-6xl mx-auto mt-6 text-center">Let's get some <span class="text-yellow-400">mooooooooony</span></h1>
+    </header>
+    <main class=" py-16">
+        <section class="w-3/4 mx-auto">
+            <!-- diposit, withdraw and balance info section  -->
+            <div class="grid grid-cols-3 gap-4 text-white">
+                <div class="bg-green-400 p-8 rounded-lg">
+                    <h1 class="text-4xl">Diposit</h1>
+                    <p class="text-6xl">$<span id="diposit-field">50</span></p>
+                </div>
+                <div class="bg-yellow-400 p-8 rounded-lg">
+                    <h1 class="text-4xl">Withdraw</h1>
+                    <p class="text-6xl">$<span id="withdraw-field">00</span></p>
+                </div>
+                <div class="bg-indigo-400 p-8 rounded-lg">
+                    <h1 class="text-4xl">Current balance</h1>
+                    <p class="text-6xl">$<span id="balance-field">100</span></p>
+                </div>
+            </div>
+            <!-- diposit and withdraw input section  -->
+            <div class="grid grid-cols-2 gap-4 my-4 ">
+                <div class="bg-violet-500 p-8 rounded-lg">
+                    <h1 class="text-4xl my-4 text-white">Please diposit</h1>
+                    <input id="diposit-input-field" class="block w-3/4 px-2 py-1 rounded-md" type="text" name="" placeholder="$ amount you want to diposit">
+                    <button id="diposit-submit-btn" class="bg-orange-400 px-4 py-2 rounded-md my-4 text-white">submit</button>
+                </div>
+                <div class="bg-pink-500 p-8 rounded-lg">
+                    <h1 class="text-4xl my-4 text-white">Please withdraw</h1>
+                    <input id="withdraw-input-field" class="block w-3/4 px-2 py-1 rounded-md" type="text" name="" placeholder="$ amount you want to withdraw">
+                    <button id="witdraw-submit-btn" class="bg-lime-400 px-4 py-2 rounded-md my-4 text-white">submit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js-file/diposit.js"></script>
+    <script src="js-file/withdraw.js"></script>
+</body>
+</html>

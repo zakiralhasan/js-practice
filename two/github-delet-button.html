@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delet button</title>
+</head>
+<body>
+
+    <!-- <form action="">
+        <h1 id="change-h1">If you want to delet this writing, press the delet button </h1>
+        <br>
+        <input id="text-area" type="text" placeholder="please type 'delet' ">
+        <button id="delete-btn" disabled>delet</button>
+    </form> -->
+
+    <h1 id="change-h1">If you want to delet this writing, press the delet button </h1>
+    <br>
+    <input id="text-area" type="text" placeholder="please type 'delet' ">
+    <button id="delete-btn" disabled>delet</button>
+
+    <script>
+        document.getElementById('text-area').addEventListener('keyup', function(event){
+            const textAreaValue = event.target.value;
+            console.log(textAreaValue);
+
+            // const deleteButton = document.getElementById('delete-btn');
+
+            // if(textAreaValue == 'delete'){
+            //     console.log(textAreaValue);
+            //     deleteButton.removeAttribute('disabled');
+            // }else{
+            //     deleteButton.setAttribute('disabled', true);
+            // };
+        });
+
+
+        document.getElementById('delete-btn').addEventListener('click', function(){
+            // document.getElementById('change-h1').style.display = 'none';
+        });
+
+    </script>
+</body>
+</html>
