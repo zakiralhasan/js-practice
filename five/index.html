@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-blue-100">
+    <header class="w-1/2 mx-auto">
+        <h1 class="text-6xl text-center mt-8"><span class="text-red-500">30%</span> Discount <span class="text-green-400">calculator</span></h1>
+        <div class="flex flex-row gap-4 mt-6 ">
+            <div class="bg-sky-300 p-8 rounded-md basis-1/2">
+                <h3 class="text-4xl text-white">Real price</h3>
+                <p class="text-2xl ">$<span id="regular-price-text-field">00</span></p>
+            </div>
+            <div class="bg-lime-300 p-8 rounded-md basis-1/2">
+                <h3 class="text-4xl text-white">Discount price</h3>
+                <p class="text-2xl text-red-700 font-semibold">$<span id="discount-text-price-field">00</span></p>
+            </div>
+        </div>
+    </header>
+    <section class="w-1/2 mx-auto">
+        <div class="flex flex-row gap-4 my-6 ">
+            <div class="basis-1/2 bg-green-300 p-4 rounded-md">
+                <input id="regular-price-input" class="block px-3 py-2 my-2 rounded-md w-5/6" type="text" name="" >
+                <button id="submit-btn" class="bg-blue-700 hover:bg-blue-400 px-4 py-2 rounded-md text-white">submit</button>
+            </div>
+            <div class="basis-1/2 bg-pink-300 p-4 rounded-md">
+                <input id="discount-price-input" class="block px-3 py-2 my-2 rounded-md w-5/6" type="text" name="" placeholder="write 'Dom' to activate the button" >
+                <button id="discount-btn" class="bg-orange-700 hover:bg-orange-400 px-4 py-2 rounded-md text-white" disabled>discount</button>
+            </div>
+        </div>
+    </section>
+    <script src="script/utilities.js"></script>
+    <script src="script/regular-price.js"></script>
+    <script src="script/discount-price.js"></script>
+</body>
+</html>
